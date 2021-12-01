@@ -1,0 +1,3 @@
+include LICENSE.md
+include versioneer.py
+include pvsim/_version.py

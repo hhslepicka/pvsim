@@ -1,0 +1,5 @@
+amplifier1:
+  type: ao
+RUNPERMIT:OK:
+  type: bo
+  initial: true
