@@ -1,5 +1,8 @@
+from codecs import open
+
+from setuptools import find_packages, setup
+
 import versioneer
-from setuptools import (setup, find_packages)
 
 with open('requirements.txt') as f:
     requirements = f.read().split()
@@ -17,11 +20,13 @@ setup(name='pvsim',
       author='hhslepicka',
       install_requires=requirements,
       packages=find_packages(),
-      description='Small simulator of PVAccess PVs',
+      description='Simulator of PVAccess PVs',
+      long_description=open('README.md', 'r', encoding='utf-8').read(),
+      long_description_content_type='text/markdown',
       include_package_data=True,
       entry_points={
           'console_scripts': [
-              'pvsim=pvsim:main'
+              'pvsim=pvsim.launcher:main'
           ]
       }
-      )
+)
